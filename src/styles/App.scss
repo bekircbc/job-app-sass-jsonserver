@@ -1,7 +1,6 @@
-$color_skills: rgb(227, 231, 138);
-$fontSize_small: 0.9rem;
-$fontSize_medium: 1.2rem;
-$fontSize_large: 1.5rem;
+@import "./_variables_customer001.scss";
+@import "./variables_default.scss";
+@import "./_functions.scss";
 
 body {
   background-color: #333;
