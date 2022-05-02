@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import "./styles/App.scss";
-import db from "./data/db.json";
+// import db from "./data/db.json";
 import { JobsFull } from "./components/JobsFull";
 import { JobsList } from "./components/JobsList";
 import md5 from "md5";
 import { AddJob } from "./components/AddJob";
+
+const jobsUrl = "http://localhost:4556/jobs";
 
 const _jobs = db.jobs;
 
@@ -54,6 +56,10 @@ function App() {
       const data = await response.json();
       setTechItems(data);
     })();
+  };
+
+  const LoadJobs = () => {
+    (async () => {})();
   };
 
   useEffect(() => {
