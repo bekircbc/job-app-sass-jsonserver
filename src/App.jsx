@@ -13,7 +13,7 @@ _jobs.forEach((job) => {
 const techItemsUrl = "https://edwardtanguay.netlify.app/share/techItems.json";
 
 const statuses = ["send", "wait", "interview", "declined", "accepted"];
-const displayKinds = ["list", "full", "addJob"];
+export const displayKinds = ["list", "full", "addJob"];
 
 function App() {
   const [displayKind, setDisplayKind] = useState("");
