@@ -1,10 +1,10 @@
-@import "./_variables_customer001.scss";
-@import "./variables_default.scss";
 @import "./_functions.scss";
+@import "./_variables_default.scss";
+// @import './_variables_customer001.scss';
 
 body {
   background-color: #333;
-  padding: 0 30px;
+  padding: 0 sum(20px, $siteIndent);
 
   .App {
     font-size: $fontSize_large;
@@ -17,6 +17,15 @@ body {
     .buttonArea {
       display: flex;
       justify-content: space-between;
+
+      .btn_normal {
+        font-family: monospace;
+      }
+
+      .btn_logout {
+        @extend .btn_normal;
+        color: red;
+      }
     }
 
     .jobs {
@@ -71,18 +80,22 @@ body {
 
     .job.send {
       background-color: rgb(70, 72, 70);
+      @include border;
     }
 
     .job.wait {
       background-color: rgb(79, 79, 14);
+      @include border;
     }
 
     .job.interview {
       background-color: rgb(61, 22, 22);
+      @include border;
     }
 
     .job.declined {
       background-color: #000;
+      @include border;
 
       .position {
         a {
@@ -97,6 +110,7 @@ body {
 
     .job.accepted {
       background-color: rgb(7, 85, 24);
+      @include border;
     }
 
     ul.jobsList {
